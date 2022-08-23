@@ -14,6 +14,8 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter/counter.component';
 import { HeaderComponent } from './header/header.component';
 import { PostsListComponent } from './posts/posts-list/posts-list.component';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { PostsListComponent } from './posts/posts-list/posts-list.component';
     BrowserModule,
     AppRoutingModule,
     StoreModule.forRoot({counter: counterReducer}),
-    FormsModule
+    FormsModule,
+    StoreDevtoolsModule.instrument({ logOnly: environment.production }),
 
   ],
   providers: [],
