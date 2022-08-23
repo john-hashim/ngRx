@@ -12,7 +12,7 @@ import { CustomCounterComponent } from './counter/custom-counter/custom-counter.
 import { from } from 'rxjs';
 import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter/counter.component';
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './shared/components/header/header.component';
 import { PostsListComponent } from './posts/posts-list/posts-list.component';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
