@@ -1,0 +1,14 @@
+<h3>Edit Post</h3>
+<form [formGroup]="postForm" (ngSubmit)="onUpdatePost()">
+    <div class="title">
+        <label for="title">Title</label>
+        <input formControlName="title" type="text">
+    </div>
+    <div class="description">
+        <label for="description">Description</label>
+        <input type="text" formControlName="description">
+    </div>
+    <div>
+        <button type="submit">Add Post</button>
+    </div>
+</form>

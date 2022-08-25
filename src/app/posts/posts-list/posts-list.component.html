@@ -1,5 +1,9 @@
+<button [routerLink]="['add']" routerLinkActive="router-link-active"  >Show add page</button>
+<router-outlet></router-outlet>
 <div *ngFor="let post of posts | async" class="lists">
     <div>{{ post.id }}</div>
     <div>{{ post.title }}</div>
     <div>{{ post.description }}</div>
+    <div (click)="deletePost(post.id!)">X</div>
+    <button [routerLink]="['edit', post.id ]" routerLinkActive="router-link-active" >Update Posts</button>
 </div>
